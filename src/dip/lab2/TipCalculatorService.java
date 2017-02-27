@@ -9,26 +9,13 @@ package dip.lab2;
  *
  * @author jerem
  */
-public abstract class TipCalculatorService {
+public interface TipCalculatorService {
 
-    private TipCalculator tipCalculator1;
+    public abstract double getCalculatedTip();
 
-    public double getCalculatedTip() {
+    public abstract TipCalculator getTipCalculator();
 
-        return tipCalculator1.getTip();
-    }
-
-    public TipCalculatorService(TipCalculator tipCalculator) {
-        this.tipCalculator1 = tipCalculator;
-    }
-
-    public TipCalculator getTipCalculator() {
-        return tipCalculator1;
-    }
-
-    public void setTipCalculator(TipCalculator tipCalculator) {
-        this.tipCalculator1 = tipCalculator;
-    }
+    public abstract void setTipCalculator(TipCalculator tipCalculator);
 
 
 }

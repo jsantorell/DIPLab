@@ -25,7 +25,7 @@ public class Startup {
         System.out.println("Tip: $" + b.getBaseTipOrBill() + " You found the service to be: " + b.getServiceQuality());
         System.out.println("Tip: $" + f.getBaseTipOrBill() + " You found the service to be: " + f.getServiceQuality());
         
-
+        
 
     }
 

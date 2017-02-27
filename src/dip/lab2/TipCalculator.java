@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
  *
  * @author jerem
  */
-public class TipCalculator {
+public abstract class TipCalculator implements TipCalculatorService {
 
     static final double MIN_BILL = 0.00;
     static final double MAX_BILL = 100.00;
@@ -40,6 +40,30 @@ public class TipCalculator {
 
 
     //Getters and Setters
+    
+        private TipCalculator tipCalculator;
+
+    @Override
+    public double getCalculatedTip() {
+
+        return tipCalculator.getTip();
+    }
+
+    public TipCalculator(TipCalculator tipCalculator) {
+        this.tipCalculator = tipCalculator;
+    }
+        public TipCalculator() {}
+
+    @Override
+    public TipCalculator getTipCalculator() {
+        return tipCalculator;
+    }
+
+    @Override
+    public void setTipCalculator(TipCalculator tipCalculator) {
+        this.tipCalculator = tipCalculator;
+    }
+    
     public int getBagCountOrPplSplit() {
         return bagCountOrPplSplit;
     }
