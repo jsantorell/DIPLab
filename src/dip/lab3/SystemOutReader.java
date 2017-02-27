@@ -5,18 +5,20 @@
  */
 package dip.lab3;
 
-import static dip.lab3.MessageCache.MessageCache;
+import static dip.lab3.MessageCache.MessageCache; //Stores the message
 import java.util.Scanner;
 
 /**
  *
  * @author jerem
  */
-public final class SystemOutReader extends Reader {
+public final class SystemOutReader implements Reader {
+
+    private Reader reader;
 
     public SystemOutReader(Reader reader) {
-        super(reader);
-        
+        setReader(reader);
+
     }
 
     @Override
@@ -25,6 +27,17 @@ public final class SystemOutReader extends Reader {
         System.out.println("enter message here:");
         String message = k.nextLine();
         MessageCache(message);
+    }
+
+    @Override
+    public Reader getReader() {
+        return reader;
+    }
+
+    @Override
+    public void setReader(Reader reader) {
+
+        this.reader = reader;
     }
 
 }

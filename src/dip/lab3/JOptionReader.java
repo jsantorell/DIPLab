@@ -12,18 +12,28 @@ import javax.swing.JOptionPane;
  *
  * @author jerem
  */
-public final class JOptionReader extends Reader {
+public final class JOptionReader implements Reader {
 
-   
+   private Reader reader;
 
     public JOptionReader(Reader reader) {
-        super(reader);
+        setReader(reader);
     }
 
     @Override
     public void Read() {
         String message = JOptionPane.showInputDialog(null, "enter message here:");
         MessageCache(message);
+    }
+
+    @Override
+    public Reader getReader() {
+        return reader;
+    }
+
+    @Override
+    public void setReader(Reader reader) {
+        this.reader = reader;
     }
 
     

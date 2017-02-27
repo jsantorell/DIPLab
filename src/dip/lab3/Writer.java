@@ -9,21 +9,11 @@ package dip.lab3;
  *
  * @author jerem
  */
-public abstract class Writer {
+public interface Writer {
 
-    private Writer writer;
+    public Writer getWriter();
 
-    public Writer(Writer writer) {
-        this.writer = writer;
-    }
-
-    public Writer getWriter() {
-        return writer;
-    }
-
-    public void setWriter(Writer writer) {
-        this.writer = writer;
-    }
+    public void setWriter(Writer writer);
 
     public abstract void Write();
 

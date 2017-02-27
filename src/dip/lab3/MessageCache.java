@@ -10,7 +10,7 @@ package dip.lab3;
  * @author jerem
  */
 public class MessageCache {
-    
+
     private static String message;
 
     public static void MessageCache(String message) {
@@ -18,13 +18,11 @@ public class MessageCache {
     }
 
     public static String getMessage() {
-        return message;
+        return "The message is: " + message;
     }
 
     public void setMessage(String message) {
         MessageCache.message = message;
     }
-    
-    
-    
+
 }

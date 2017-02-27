@@ -9,21 +9,11 @@ package dip.lab3;
  *
  * @author jerem
  */
-public abstract class Reader{
-    
-    private Reader reader;
+public interface Reader{
 
-    public Reader(Reader reader) {
-        this.reader = reader;
-    }  
+    public Reader getReader();
 
-    public Reader getReader() {
-        return reader;
-    }
-
-    public void setReader(Reader reader) {
-        this.reader = reader;
-    }
+    public void setReader(Reader reader);
 
     public abstract void Read();
 

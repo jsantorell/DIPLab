@@ -11,11 +11,12 @@ import javax.swing.JOptionPane;
  *
  * @author jerem
  */
-public class JOptionWriter extends Writer{
+public class JOptionWriter implements Writer{
     
-
+    private Writer writer;
+    
     public JOptionWriter(Writer writer) {
-        super(writer);
+        setWriter(writer);
     }
 
     @Override
@@ -23,6 +24,16 @@ public class JOptionWriter extends Writer{
         
         JOptionPane.showMessageDialog(null, MessageCache.getMessage());
         
+    }
+
+    @Override
+    public Writer getWriter() {
+        return writer;
+    }
+
+    @Override
+    public void setWriter(Writer writer) {
+        this.writer = writer;
     }
     
    

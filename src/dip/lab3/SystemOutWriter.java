@@ -9,16 +9,29 @@ package dip.lab3;
  *
  * @author jerem
  */
-public class SystemOutWriter extends Writer{
+public final class SystemOutWriter implements Writer {
 
+    private Writer writer;
+    
     public SystemOutWriter(Writer writer) {
-        super(writer);
+        setWriter(writer);
     }
 
     @Override
     public void Write() {
         System.out.println(MessageCache.getMessage());
-        
+
     }
-    
+
+    @Override
+    public Writer getWriter() {
+ return writer;    }
+
+    @Override
+    public void setWriter(Writer writer) {
+        this.writer = writer;
+    }
+
 }
+
+
