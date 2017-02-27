@@ -13,8 +13,8 @@ public class MessageCache {
     
     private static String message;
 
-    public void MessageCache(String message) {
-        this.message = message;
+    public static void MessageCache(String message) {
+        MessageCache.message = message;
     }
 
     public static String getMessage() {
@@ -22,7 +22,7 @@ public class MessageCache {
     }
 
     public void setMessage(String message) {
-        this.message = message;
+        MessageCache.message = message;
     }
     
     

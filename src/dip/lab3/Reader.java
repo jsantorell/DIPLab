@@ -9,7 +9,7 @@ package dip.lab3;
  *
  * @author jerem
  */
-public abstract class Reader extends MessageCache{
+public abstract class Reader{
     
     private Reader reader;
 

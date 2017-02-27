@@ -5,6 +5,7 @@
  */
 package dip.lab3;
 
+import static dip.lab3.MessageCache.MessageCache;
 import javax.swing.JOptionPane;
 
 /**

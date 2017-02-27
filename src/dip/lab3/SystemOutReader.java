@@ -5,16 +5,18 @@
  */
 package dip.lab3;
 
+import static dip.lab3.MessageCache.MessageCache;
 import java.util.Scanner;
 
 /**
  *
  * @author jerem
  */
-public class SystemOutReader extends Reader {
+public final class SystemOutReader extends Reader {
 
     public SystemOutReader(Reader reader) {
         super(reader);
+        
     }
 
     @Override
@@ -24,4 +26,5 @@ public class SystemOutReader extends Reader {
         String message = k.nextLine();
         MessageCache(message);
     }
+
 }
