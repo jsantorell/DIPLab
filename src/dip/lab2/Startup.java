@@ -21,9 +21,15 @@ public class Startup {
 
         TipCalculator b = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 4, 1);
         TipCalculator f = new FoodServiceTipCalculator(ServiceQuality.GOOD, 24.23, 1);
-
-        System.out.println("Tip: $" + b.getBaseTipOrBill() + " You found the service to be: " + b.getServiceQuality());
-        System.out.println("Tip: $" + f.getBaseTipOrBill() + " You found the service to be: " + f.getServiceQuality());
+        
+        
+        TipCalculatorService t = new TipCalculator(b);
+        TipCalculatorService t1 = new TipCalculator(f);
+        
+    
+        
+        System.out.println("Tip: $" + t.getCalculatedTip());
+        System.out.println("Tip: $" + t1.getCalculatedTip());
         
         
 
