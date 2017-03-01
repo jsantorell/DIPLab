@@ -5,6 +5,8 @@
  */
 package dip.lab3;
 
+import java.util.Scanner;
+
 /**
  *
  * @author jerem
@@ -13,6 +15,7 @@ public class MessagingSystem {
 
     public static void main(String[] args) {
 
+        Scanner k = new Scanner(System.in);
         Writer writer = null;
         Reader reader = null;
 
@@ -23,11 +26,12 @@ public class MessagingSystem {
         Writer sOW = new SystemOutWriter(writer);
 
         //Different types of Readers and Writers^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        MessageService s = new MessageService(r, sOW);
-        
-
-        s.setMessage();
+        MessageService s = new MessageService(sOR, sOW);//Add whichever reader and writer you want.
+          
+        s.setMessage(); //These are seperate for potential to use in different locations.
         s.outputMessage();
+ 
 
     }
+    
 }
