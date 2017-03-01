@@ -11,7 +11,7 @@ package dip.lab3;
  */
 public final class MessageService {
     
-    private Writer write;
+    private Writer writer;
     private Reader reader;
     
     public void setMessage(){
@@ -20,22 +20,22 @@ public final class MessageService {
     
     };
     public void outputMessage(){
-        write.write();
+        writer.write();
     };
 
     public MessageService(Reader r, Writer w) {
         
        this.reader = r;
-       this.write = w;
+       this.writer = w;
         
     }
 
     public Writer getWrite() {
-        return write;
+        return writer;
     }
 
     public void setWrite(Writer write) {
-        this.write = write;
+        this.writer = write;
     }
 
     public Reader getReader() {

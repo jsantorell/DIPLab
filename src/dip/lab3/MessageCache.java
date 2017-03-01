@@ -5,24 +5,25 @@
  */
 package dip.lab3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author jerem
  */
 public class MessageCache {
 
-    private static String message;
+ 
+    private static List<String> messages = new ArrayList<>(); 
 
     public static void MessageCache(String message) {
-        MessageCache.message = message;
+        messages.add(message);
     }
 
     public static String getMessage() {
-        return "The message is: " + message;
+        return "The message(s): " + messages;
     }
 
-    public void setMessage(String message) {
-        MessageCache.message = message;
-    }
 
 }
