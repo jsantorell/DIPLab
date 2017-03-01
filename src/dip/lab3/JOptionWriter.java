@@ -11,22 +11,13 @@ import javax.swing.JOptionPane;
  *
  * @author jerem
  */
-public class JOptionWriter implements Writer{
-    
- 
-    
-    public JOptionWriter(Writer writer) {
-        
-    }
+public class JOptionWriter implements Writer {
 
     @Override
     public void write() {
-        
+
         JOptionPane.showMessageDialog(null, MessageCache.getMessage());
-        
+
     }
 
-    
-   
-    
 }

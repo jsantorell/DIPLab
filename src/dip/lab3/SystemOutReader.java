@@ -14,10 +14,6 @@ import java.util.Scanner;
  */
 public final class SystemOutReader implements Reader {
 
-    public SystemOutReader(Reader reader) {
-
-    }
-
     @Override
     public void read() {
         int count = 0;
@@ -37,6 +33,15 @@ public final class SystemOutReader implements Reader {
                 MessageCache(message);
             }
         }
+
     }
+    
+//KEEP THIS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//    public String read() {//the reader component to make a message without a cache.
+//        Scanner k = new Scanner(System.in);
+//        System.out.print("enter message here:");
+//        return k.nextLine();
+//    }
+//KEEP THIS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 }

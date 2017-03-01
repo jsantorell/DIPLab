@@ -10,18 +10,15 @@ package dip.lab3;
  * @author jerem
  */
 public final class SystemOutWriter implements Writer {
-    
-    public SystemOutWriter(Writer writer) {
-   
-    }
 
     @Override
     public void write() {
         System.out.println(MessageCache.getMessage());
 
     }
-
-
+//KEEP THIS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//    public void write(Reader r) {//this is an option to write a message without the message cache
+//        System.out.println(r.getMessage());
+//    }
+//KEEP THIS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
-
-

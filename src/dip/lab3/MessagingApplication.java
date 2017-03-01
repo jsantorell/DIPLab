@@ -13,9 +13,6 @@ public class MessagingApplication {
 
     public static void main(String[] args) {
 
-//        Writer writer = null;
-//        Reader reader = null;
-
         Reader r = new JOptionReader();
         Writer w = new JOptionWriter();
 
@@ -23,14 +20,14 @@ public class MessagingApplication {
         Writer sOW = new SystemOutWriter();
 
         //Different types of Readers and Writers^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        MessageService s = new MessageService(sOR, sOW);//Add whichever reader and writer you want.
-          
-        s.produceMessage();
         
-//        s.setMessage(); //These are seperate for potential to use in different locations.
-//        s.outputMessage();
- 
+        MessageService s = new MessageService(sOR, sOW);//Add whichever reader and writer you want.
 
+        
+        s.produceMessage();
+
+//      s.setMessage(); //These are seperate for potential to use in different locations.
+//      s.outputMessage();
     }
-    
+
 }

@@ -14,27 +14,15 @@ import javax.swing.JOptionPane;
  */
 public final class JOptionReader implements Reader {
 
-
-
-
-    public JOptionReader(Reader reader) {
-        
-    }
-
     @Override
     public void read() {
-        
+
         String selectNumberofMessages = JOptionPane.showInputDialog(null, "How many messages would you like to add?");
         int sm = Integer.parseInt(selectNumberofMessages);
-        for(int i=0; sm>i; i++){
-        String message = JOptionPane.showInputDialog(null, "enter message here:");
-        MessageCache(message);
+        for (int i = 0; sm > i; i++) {
+            String message = JOptionPane.showInputDialog(null, "enter message here:");
+            MessageCache(message);
         }
     }
-
-
-    
-
-
 
 }

@@ -9,9 +9,7 @@ package dip.lab3;
  *
  * @author jerem
  */
-public interface Reader{
-
+public interface Reader {
 
     public abstract void read();
-
 }

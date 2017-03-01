@@ -14,16 +14,15 @@ import java.util.List;
  */
 public class MessageCache {
 
- 
-    private static List<String> messages = new ArrayList<>(); 
+    private static List<String> messages = new ArrayList<>();
 
     public static void MessageCache(String message) {
-        messages.add(message);
+
+        messages.add(message);//add the message to the list
     }
 
     public static String getMessage() {
         return "The message(s): " + messages;
     }
-
 
 }

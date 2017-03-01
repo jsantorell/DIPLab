@@ -10,41 +10,34 @@ package dip.lab3;
  * @author jerem
  */
 public final class MessageService {
-    
+
     private Writer writer;
     private Reader reader;
-    
-    public void setMessage(){
 
-        reader.read();
-    
-    };
-    public void outputMessage(){
-        writer.write();
-    };
-
-    public MessageService(Reader r, Writer w) {
-        
-       this.reader = r;
-       this.writer = w;
-        
+    public void produceMessage() {//run the whole service together
+        setMessage();
+        outputMessage();
     }
 
-    public Writer getWrite() {
-        return writer;
+    public void setMessage() {//only read the message
+        reader.read();
+    }
+
+    public void outputMessage() {//only write the message
+        writer.write();
+    }
+
+    public MessageService(Reader r, Writer w) {
+        this.reader = r;
+        this.writer = w;
     }
 
     public void setWrite(Writer write) {
         this.writer = write;
     }
 
-    public Reader getReader() {
-        return reader;
-    }
-
     public void setReader(Reader reader) {
         this.reader = reader;
     }
 
-    
 }
