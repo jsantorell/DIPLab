@@ -11,15 +11,7 @@ package dip.lab3;
  */
 public interface Reader{
 
-    public Reader getReader();
 
-    public void setReader(Reader reader);
-
-    public abstract void Read();
-
-
-    
-
-    
+    public abstract void read();
 
 }

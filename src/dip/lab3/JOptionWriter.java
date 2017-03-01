@@ -13,28 +13,19 @@ import javax.swing.JOptionPane;
  */
 public class JOptionWriter implements Writer{
     
-    private Writer writer;
+ 
     
     public JOptionWriter(Writer writer) {
-        setWriter(writer);
+        
     }
 
     @Override
-    public void Write() {
+    public void write() {
         
         JOptionPane.showMessageDialog(null, MessageCache.getMessage());
         
     }
 
-    @Override
-    public Writer getWriter() {
-        return writer;
-    }
-
-    @Override
-    public void setWriter(Writer writer) {
-        this.writer = writer;
-    }
     
    
     

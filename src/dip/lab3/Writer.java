@@ -11,11 +11,7 @@ package dip.lab3;
  */
 public interface Writer {
 
-    public Writer getWriter();
-
-    public void setWriter(Writer writer);
-
-    public abstract void Write();
+    public abstract void write();
 
 
 }

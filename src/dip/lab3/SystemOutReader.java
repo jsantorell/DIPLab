@@ -14,30 +14,20 @@ import java.util.Scanner;
  */
 public final class SystemOutReader implements Reader {
 
-    private Reader reader;
+
 
     public SystemOutReader(Reader reader) {
-        setReader(reader);
+   
 
     }
 
     @Override
-    public void Read() {
+    public void read() {
         Scanner k = new Scanner(System.in);
         System.out.println("enter message here:");
         String message = k.nextLine();
         MessageCache(message);
     }
 
-    @Override
-    public Reader getReader() {
-        return reader;
-    }
-
-    @Override
-    public void setReader(Reader reader) {
-
-        this.reader = reader;
-    }
 
 }

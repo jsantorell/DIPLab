@@ -10,23 +10,24 @@ package dip.lab3;
  * @author jerem
  */
 public class MessagingSystem {
-    
+
     public static void main(String[] args) {
-        
+
         Writer writer = null;
         Reader reader = null;
-        
+
         Reader r = new JOptionReader(reader);
         Writer w = new JOptionWriter(writer);
-        
+
         Reader sOR = new SystemOutReader(reader);
         Writer sOW = new SystemOutWriter(writer);
+
+        //Different types of Readers and Writers^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        MessageService s = new MessageService(r, sOW);
         
-        r.Read();
-        w.Write();
-        
-        sOR.Read();
-        sOW.Write();
-        
+
+        s.setMessage();
+        s.outputMessage();
+
     }
 }

@@ -1,8 +1,10 @@
 package dip.lab1;
 
+import dip.lab3.MessageCache;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  * Just a start and test class for this program. You may modify this class in
@@ -37,8 +39,11 @@ public class Startup {
 
         for (Employee emp : employeeList) {
 
-            System.out.println("Employee " + count + " annual compensation: "
-                    + nf.format(hr.getAnnualCompensationForEmployee(emp)) + " Type: " + emp.getEmployeeType());
+            System.out.println(count + " " + emp.getEmployeeType() + " annual compensation: "
+                    + nf.format(hr.getAnnualCompensationForEmployee(emp)) + " Hourly Rate: "
+                    + nf.format(emp.getHourlyRate()) + " Annual Wages: " + emp.getAnnualWages()
+                    + " Annual Bonus: " + emp.getAnnualBonus()
+            );
             count++;
         }
 

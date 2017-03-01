@@ -16,7 +16,7 @@ public class HourlyEmployee implements Employee {
     public HourlyEmployee(double hourlyRate, double totalHrsForYear) {
         this.hourlyRate = hourlyRate;
         this.totalHrsForYear = totalHrsForYear;
-        this.type = "Hourly";
+        this.type = "Hourly  ";
     }
 
     @Override
@@ -31,7 +31,11 @@ public class HourlyEmployee implements Employee {
 
     @Override
     public void setHourlyRate(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
+        if(hourlyRate < 15.00){
+            System.out.println("Minumum Hourly rate is $15.00.");
+        } else {
+            this.hourlyRate = hourlyRate;
+        }
     }
 
     @Override
@@ -41,7 +45,14 @@ public class HourlyEmployee implements Employee {
 
     @Override
     public void setTotalHrsForYear(double totalHrsForYear) {
+        
+        if(totalHrsForYear < 1){
+        
+            System.out.println("This person either did not work this year or was never added.");
+        }
+        else{
         this.totalHrsForYear = totalHrsForYear;
+        }
     }
 
     @Override
@@ -51,7 +62,14 @@ public class HourlyEmployee implements Employee {
 
     @Override
     public void setAnnualBonus(double annualBonus) {
+        
+        if(type.equals("Hourly  ") || annualBonus == 0){
+        
+            this.annualBonus = 0.00;
+        }
+        else{
         this.annualBonus = annualBonus;
+        }
     }
 
     @Override
